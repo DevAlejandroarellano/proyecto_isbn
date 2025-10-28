@@ -1,0 +1,34 @@
+name: Pruebas y Cobertura ISBN
+
+on: 
+  # Ejecuta el workflow en cada push (subida) y pull request
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    # Se ejecuta en una máquina virtual Linux (ubuntu-latest)
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout del Repositorio
+      # Clona el código de GitHub
+      uses: actions/checkout@v4
+      
+    - name: Configurar Python 3.x
+      # Instala la versión más reciente de Python 3
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x' 
+        
+    - name: Instalar Dependencias
+      # Instala las librerías necesarias para la ejecución de las pruebas
+      run: |
+        pip install pytest pytest-cov hypothesis 
+        
+    - name: Ejecutar Pruebas y Reportar Cobertura
+      # Ejecuta todas las pruebas y reporta la cobertura (term-missing para mostrar el 100%)
+      run: |
+        python -m pytest --cov=src --cov-report=term-missing

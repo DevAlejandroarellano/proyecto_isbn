@@ -1,0 +1,4 @@
+# file: c:\Users\alexx\Desktop\proyecto_isbn\src\isbn.py
+# hypothesis_version: 6.142.4
+
+['-', 'ISBN-10', 'ISBN-13', 'Inválido', 'X']
