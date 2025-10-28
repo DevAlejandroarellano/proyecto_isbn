@@ -1,4 +1,4 @@
-name: Pruebas y Cobertura ISBN
+name: Pruebas y Cobertura ISBN.
 
 on: 
   # Ejecuta el workflow en cada push (subida) y pull request
@@ -10,6 +10,7 @@ on:
 jobs:
   test:
     # Se ejecuta en una máquina virtual Linux (ubuntu-latest)
+    #Comentario agregado para forzar CI
     runs-on: ubuntu-latest
     
     steps:
