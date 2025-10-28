@@ -4,6 +4,8 @@
 # Funciones para validar ISBN
 # ------------------------------
 
+#Nuevo comentario para CI
+
 # Esta función quita espacios y guiones del texto
 def limpiar_isbn(texto):
     if texto is None:
