@@ -1,0 +1,8 @@
+{
+    "coverage_lines": 100,
+    "coverage_branches": 100,
+    "tests_total": 19,
+    "tests_passed": 19,
+    "ci_status": "verde",
+    "properties_implemented": 2
+}
